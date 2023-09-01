@@ -1,16 +1,12 @@
-FROM node:19-alpine3.16
+FROM node:latest
 
-WORKDIR /react-app
+WORKDIR /usr/src/app
 
-COPY package.json .
+COPY package.json ./
 
-COPY package-lock.json .
-
-RUN npm i
-
+RUN npm install
 
 COPY . .
 
-EXPOSE 3000
-
-CMD ["npm", "start"]
+EXPOSE 4000
+CMD [ "node", "index.js" ]
