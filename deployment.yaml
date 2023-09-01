@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: deployment
   labels:
-    app: react-app
+    app: nodeapp
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: react-app
+      app: nodeapp
   template:
     metadata:
       labels:
-        app: react-app 
+        app: nodeapp 
     spec:
       containers:
-      - name: react-app
-        image: bravinwasike/react-app:latest
+      - name: nodeapp
+        image: chendureddy/nodeapp:latest
         ports:
         - containerPort: 3000
