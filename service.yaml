@@ -4,7 +4,7 @@ metadata:
   name: service
 spec:
   selector:
-    app: react-app
+    app: nodeapp
   type: LoadBalancer
   ports:
   - protocol: TCP
